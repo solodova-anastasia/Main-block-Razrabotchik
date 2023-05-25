@@ -39,3 +39,12 @@ string[] GetArrayThreeSimvol (string[] array)
     }
     return arrayThreeSimvol;
 }
+
+// Создаём метод void Print - для вывода информации из массивов с использованием циклического вывода каждого элемента массива.
+void Print (string[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($"{array[i]}, ");
+    }
+}
