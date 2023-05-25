@@ -14,3 +14,28 @@ string[] GetArrayStringConsole (string inConsolSimvol)
     arraySimvol = inConsolSimvol.Split(",");
     return arraySimvol;
 }
+
+// Создаём метод string[], сортирующий символы из массива. Отсчитываем количество символов и проверям на соответствие указанным требованиям. 
+string[] GetArrayThreeSimvol (string[] array)
+{
+    int count = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        string simvol = array[i];
+        if (simvol.Length <= 3)
+        {
+            count++;
+        }
+    }
+    string[] arrayThreeSimvol = new string[count];
+    for (int i = 0, j = 0; i < array.Length; i++)
+    {
+        string simvol = array[i];
+        if (simvol.Length <= 3)
+        {
+            arrayThreeSimvol[j] = simvol;
+            j++;
+        }
+    }
+    return arrayThreeSimvol;
+}
