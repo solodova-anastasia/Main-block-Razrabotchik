@@ -47,4 +47,16 @@ void Print (string[] array)
     {
         Console.Write($"{array[i]}, ");
     }
+    Console.WriteLine();
 }
+
+Console.Write("Введите набор символов через знак (,): ");
+string inStringSimvol = Console.ReadLine();
+string[] arraySimvol = GetArrayStringConsole(inStringSimvol);
+Console.WriteLine();
+Console.Write("Введенные символы: ");
+Print(GetArrayStringConsole(inStringSimvol));
+Console.WriteLine();
+Console.Write("Введенные символы длинной меньше либо равны 3: ");
+Print(GetArrayThreeSimvol(arraySimvol));
+Console.WriteLine();
